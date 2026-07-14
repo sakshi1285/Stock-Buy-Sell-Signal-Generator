@@ -2,25 +2,28 @@
 
 ## Project Description
 
-This project reads Daily_REL.xlsx and Weekly_REL.xlsx files and generates Buy and Sell signals automatically based on predefined conditions.
+This project reads two Excel files:
 
-## Buy Condition
+- Daily_REL.xlsx
+- Weekly_REL.xlsx
+
+The program compares the Daily Close price with the last Weekly High and Weekly Low.
+
+### Buy Condition
 
 If Daily Close > Last Weekly High
 
-Generate Buy Signal
+→ Record is saved in Buy.xlsx
 
-## Sell Condition
+### Sell Condition
 
 If Daily Close < Last Weekly Low
 
-Generate Sell Signal
+→ Record is saved in Sell.xlsx
 
-## Output Files
+### Additional Output
 
-- Buy.xlsx
-- Sell.xlsx
-- Day_1_REL.xlsx
+A copy of the latest Daily_REL.xlsx is stored as Day_1_REL.xlsx for testing and comparison purposes.
 
 ## Technologies Used
 
@@ -30,7 +33,13 @@ Generate Sell Signal
 
 ## How to Run
 
-Open Terminal and run:
+1. Install the required libraries:
+
+```bash
+pip install -r requirements.txt
+```
+
+2. Run the program:
 
 ```bash
 python trade.py
